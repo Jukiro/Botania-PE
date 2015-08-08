@@ -10,6 +10,6 @@ public:
 	}
 	
 	TextureUVCoordinateSet const& getTexture(signed char t, int t1) {
-		if(t1==0) return getTextureUVCoordinateSet("puredaisy", 0);
+		return getTextureUVCoordinateSet("puredaisy", 0);
 	}
 };
