@@ -1,7 +1,7 @@
 #pragma once
 
-#include "minecraftpe/item/Item.h"
-#include "minecraftpe/item/ItemInstance.h"
+#include "mcpe/item/Item.h"
+#include "mcpe/item/ItemInstance.h"
 
 class PetalItem : public Item {
 public:

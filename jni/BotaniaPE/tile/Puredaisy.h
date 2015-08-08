@@ -1,18 +1,14 @@
 #pragma once
 
-#include "minecraftpe/level/TileSource.h"
-#include "minecraftpe/level/Level.h"
-#include "minecraftpe/level/ParticleType.h"
-#include "minecraftpe/util/Vec3.h"
+#include "BotaniaFlower.h"
 
-#include "FlowerTile.h"
-
-class Puredaisy : public FlowerTile {
+class PureDaisy : public BotaniaFlower {
 public:
-	virtual void animateTick(TileSource*, int, int, int, Random*);
-	virtual int getResource(int, Random*);
-	virtual int getResourceCount(Random*);
-	virtual TextureUVCoordinateSet const& getTexture(signed char, int);
+	PureDaisy(int id) : BotaniaFlower(id) {
+		setNameId("pureDaisy");
+	}
 	
-	Puredaisy(int, Material const*);
+	TextureUVCoordinateSet const& getTexture(signed char t, int t1) {
+		return getTextureUVCoordinateSet("puredaisy", 0);
+	}
 };

@@ -8,14 +8,16 @@ public:
 		setSoundType(Tile::SOUND_GRASS);
 		setDestroyTime(0.0);
 		setCategory(2);
-		renderPass = 3;
+		renderType = 19;
+		renderPass = 4;
 	}
 	
 	BotaniaFlower(int blockId) : BotaniaTile(blockId, &Material::decoration) {
 		setSoundType(Tile::SOUND_GRASS);
 		setDestroyTime(0.0);
 		setCategory(2);
-		renderPass = 3;
+		renderPass = 4;
+		renderType = 19;
 	}
 	
 	void neighborChanged(TileSource* ts, int x, int y, int z, int xx, int yy, int zz) {

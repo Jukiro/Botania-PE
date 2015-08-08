@@ -1,11 +1,14 @@
 #pragma once
 
-#include "FlowerTile.h"
+#include "BotaniaFlower.h"
 
-class MysticalFlower : public FlowerTile {
+class MysticalFlower : public BotaniaFlower {
 public:
-	virtual TextureUVCoordinateSet const& getTexture(signed char, int);
-	virtual std::string getName(const ItemInstance *) const;
+	MysticalFlower(int id) : BotaniaFlower(id) {
+		setNameId("mysticalFlower");
+	}
 	
-	MysticalFlower(int, Material const*);
+	TextureUVCoordinateSet const& getTexture(signed char t, int t1) {
+		return getTextureUVCoordinateSet("flower", 0);
+	}
 };
