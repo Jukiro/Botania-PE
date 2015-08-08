@@ -1,6 +1,7 @@
 #pragma once
 
 #include "mcpe/tile/Tile.h"
+#include "mcpe/item/ItemInstance.h"
 
 class BotaniaTile : public Tile {	
 public:

@@ -10,6 +10,7 @@ PetalItem::PetalItem(int id) : Item(id - 256) {
 
 /*TextureUVCoordinateSet PetalItem::getIcon(int i1, int i2, bool b) const{
 	return getTextureUVCoordinateSet("petal",0);
+	//this function appearantly doesn't exist in 0.11 appearantly.
 }*/
 
 std::string PetalItem::getName(const ItemInstance *inst) const{
