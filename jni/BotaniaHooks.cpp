@@ -16,24 +16,9 @@
 bool (*_TileTessellator$tessellateInWorld)(TileTessellator*, Tile*, const TilePos&, bool);
 bool TileTessellator$tessellateInWorld(TileTessellator* self, Tile* tile, const TilePos& pos, bool b) {
 	switch(tile->id) {
-		/*case 200:
-			return self->tessellateBotaniaFlowerInWorld(tile, pos);
-			break;
-		case 201:
-			return self->tessellateBotaniaFlowerInWorld(tile, pos);
-			break;
-		case 202:
-			return self->tessellateBotaniaFlowerInWorld(tile, pos);
-			break;
-		case 203:
-			return self->tessellateBotaniaFlowerInWorld(tile, pos);
-			break;
 		case 204:
-			return self->tessellateBotaniaFlowerInWorld(tile, pos);
+			return self->tessellateBotaniaApothecaryInWorld(tile, pos);
 			break;
-		case 205:
-			return self->tessellateBotaniaFlowerInWorld(tile, pos);
-			break;*/
 		default:
 			return _TileTessellator$tessellateInWorld(self, tile, pos, b);
 	}

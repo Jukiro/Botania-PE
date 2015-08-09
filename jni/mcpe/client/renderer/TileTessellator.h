@@ -43,6 +43,51 @@ public:
 		if(ts->getTilePtr(x, y, z) == tile) return true;
 	}
 	
+	bool tessellateBotaniaApothecaryInWorld(Tile* tile, TilePos const& pos){
+		useForcedUV = true;
+		int x = pos.x, y = pos.y, z = pos.z;
+		
+		forcedUV = tile->getTextureUVCoordinateSet("cobblestone",0);
+		
+		setRenderBounds(0.0, 0.0, 0.0, 1.0, 0.125, 1.0);
+		tessellateBlockInWorld(tile, pos);
+		
+		setRenderBounds(0.0625, 0.125, 0.0625, 0.9375, 0.1875, 0.9375);
+		tessellateBlockInWorld(tile, pos);
+		
+		setRenderBounds(0.125, 0.1875, 0.125, 0.875, 0.25, 0.875); //appearantly I do...
+		tessellateBlockInWorld(tile, pos);
+		
+		setRenderBounds(0.3125, 0.25, 0.3125, 0.6875, 0.75, 0.6875);
+		tessellateBlockInWorld(tile, pos);
+		
+		setRenderBounds(0.25, 0.75, 0.25, 0.75, 0.8125, 0.75);
+		tessellateBlockInWorld(tile, pos);
+		
+		setRenderBounds(0.1875, 0.8125, 0.1875, 0.8125, 0.875, 0.8125);
+		tessellateBlockInWorld(tile, pos);
+		
+		setRenderBounds(0.125, 0.875, 0.1875, 0.1875, 1.25, 0.8125);
+		tessellateBlockInWorld(tile, pos);
+		
+		setRenderBounds(0.1875, 0.875, 0.125, 0.8125, 1.25, 0.1875);
+		tessellateBlockInWorld(tile, pos);
+		
+		setRenderBounds(0.8125, 0.875, 0.1875, 0.875, 1.25, 0.8125);
+		tessellateBlockInWorld(tile, pos);
+		
+		setRenderBounds(0.1875, 0.875, 0.8125, 0.8125, 1.25, 0.875);
+		tessellateBlockInWorld(tile, pos);
+		
+		int data = tileSource->getData(x, y, z);
+		if(data==1){
+			forcedUV = tile->getTextureUVCoordinateSet("water",0);
+			setRenderBounds(0.1875, 0.875, 0.1875, 0.8125, 1.1875, 0.8125);
+			tessellateBlockInWorld(tile, pos);
+		}
+		
+		useForcedUV = false;
+	}
 	
 	bool tessellateBotaniaFlowerInWorld(Tile* tile, TilePos const& pos) {
 		int x = pos.x;
