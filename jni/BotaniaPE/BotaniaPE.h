@@ -14,6 +14,7 @@ public:
 		new MysticalFlower(200);
 		new PureDaisy(201); //should this be multiple data values for multiple flowers in one?
 		new Livingrock(202);
+		new Livingwood(203);
 	}
 	
 	static void itemRegistry() {

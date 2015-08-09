@@ -63,6 +63,5 @@ std::string PetalItem::getName(const ItemInstance *inst) const{
 		case 15:
 			return "petal_white";
 			break;
-		
 	}
 }
