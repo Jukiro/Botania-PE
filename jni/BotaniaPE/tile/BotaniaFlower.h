@@ -31,4 +31,8 @@ public:
 	void addAABBs(TileSource* ts, int x, int y, int z, const AABB* aabb, std::vector<AABB>& ab) {
 		Tile::tiles[38]->addAABBs(ts, x, y, z, aabb, ab);
 	}
+	
+	bool isPathfindable(TileSource* ts, int x, int y, int z){
+		return true;
+	}
 };

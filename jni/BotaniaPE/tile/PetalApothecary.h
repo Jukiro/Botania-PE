@@ -1,16 +1,30 @@
 #pragma once
-#include "minecraftpe/tile/Tile.h"
-#include "minecraftpe/item/TileItem.h"
+#include "BotaniaTile.h"
 
-class PetalApothecary : public Tile {
+class PetalApothecary : public BotaniaTile {
 public:
-	static PetalApothecary* petalApothecary;
+	PetalApothecary(int id) : BotaniaTile(id, &Material::stone) {
+		setNameId("petalApothecary");
+		setSoundType(Tile::SOUND_STONE);
+	}
 	
-	virtual int getResource(int, Random *);
-	virtual int getResourceCount(Random *);
-	virtual TextureUVCoordinateSet const& getTexture(signed char, int);
-	virtual bool isObstructingChests(TileSource *, int, int, int);
-	virtual bool isPathfindable(TileSource *, int, int, int);
+	int getResource(int i, Random* random){
+		return id;
+	}
 	
-	PetalApothecary(int, Material const*);
+	int getResourceCount(Random* random){
+		return 1;
+	}
+	
+	TextureUVCoordinateSet const& getTexture(signed char t, int t1){
+		return getTextureUVCoordinateSet("cobblestone",0);
+	}
+	
+	bool isObstructingChests(TileSource* ts, int i1, int i2, int i3){
+		return false;
+	}
+	
+	bool isPathfindable(TileSource* ts, int i1, int i2, int i3){
+		return false;
+	}
 };

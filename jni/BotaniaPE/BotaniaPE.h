@@ -7,6 +7,7 @@
 #include "tile/MysticalFlower.h"
 #include "tile/Puredaisy.h"
 #include "tile/Livingrock.h"
+#include "tile/Livingwood.h"
 
 class BotaniaPE {
 public:

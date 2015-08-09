@@ -2,6 +2,7 @@
 
 #include "mcpe/tile/Tile.h"
 #include "mcpe/item/ItemInstance.h"
+#include "mcpe/level/Level.h"
 
 class BotaniaTile : public Tile {	
 public:
@@ -9,6 +10,7 @@ public:
 		init();
 		Tile::solid[id] = false;
 		Tile::lightBlock[id] = 0;
+		setTicking(true);
 		new TileItem(id-0x100);
 	}
 	
