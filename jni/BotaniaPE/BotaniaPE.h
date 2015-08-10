@@ -13,6 +13,7 @@
 
 #include "item/BotaniaItem.h"
 #include "item/Petal.h"
+#include "item/Lexica.h"
 
 class BotaniaPE {
 public:
@@ -25,6 +26,7 @@ public:
 	}
 	
 	static void itemRegistry() {
-		new Petal(500);
+		new Lexica(500);
+		new Petal(501);
 	}
 };

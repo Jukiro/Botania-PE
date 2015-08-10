@@ -4,7 +4,7 @@
 
 class Petal : public BotaniaItem {
 public:
-	Petal(int id) : BotaniaItem(id) {
+	Petal(int id) : BotaniaItem(id - 0x100) {
 		setNameID("petal_color");
 		setIcon("petal",0);
 	}
