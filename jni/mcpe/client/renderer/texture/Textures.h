@@ -21,7 +21,7 @@ public:
 	void clear();
 	void getDynimicTextureData(DynamicTexture);
 	void getDynimicTextureDataModify(DynamicTexture);
-	TextureData *getTextureData(const std::string &);
+	const TextureData& getTextureData(const std::string &);
 	void loadDynamicTextures();
 	void loadList(const std::string &, std::function<void (void)>);
 	void loadTexture(const std::string &, bool, bool, bool);

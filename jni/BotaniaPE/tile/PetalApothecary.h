@@ -19,7 +19,12 @@ public:
 	}
 	
 	TextureUVCoordinateSet const& getTexture(signed char t, int t1){
-		return getTextureUVCoordinateSet("cobblestone",0);
+		if(t1==0)
+			return getTextureUVCoordinateSet("cobblestone",0);
+		if(t1==1)
+			return getTextureUVCoordinateSet("cobblestone",0);
+		if(t1==2)
+			return getTextureUVCoordinateSet("cobblestone",0);
 	}
 	
 	bool isObstructingChests(TileSource* ts, int i1, int i2, int i3){

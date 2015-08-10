@@ -1,6 +1,7 @@
 #pragma once
 
 #include "mcpe/tile/Tile.h"
+#include "mcpe/item/Item.h"
 
 #include "tile/BotaniaTile.h"
 #include "tile/BotaniaFlower.h"
@@ -9,6 +10,9 @@
 #include "tile/Livingrock.h"
 #include "tile/Livingwood.h"
 #include "tile/PetalApothecary.h"
+
+#include "item/BotaniaItem.h"
+#include "item/Petal.h"
 
 class BotaniaPE {
 public:
@@ -21,6 +25,6 @@ public:
 	}
 	
 	static void itemRegistry() {
-		
+		new Petal(500);
 	}
 };

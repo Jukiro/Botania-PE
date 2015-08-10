@@ -36,7 +36,7 @@ void (*_Item$initItems)();
 void Item$initItems() {
 	_Item$initItems();
 	
-	BotaniaPE::itemRegistry;
+	BotaniaPE::itemRegistry();
 }
 
 
@@ -53,6 +53,5 @@ JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved) {
 	MSHookFunction((void*) &Tile::initTiles, 					(void*) &Tile$initTiles, 						(void**) &_Tile$initTiles);
 	MSHookFunction((void*) &MinecraftClient::init, 				(void*) &MinecraftClient$init, 					(void**) &_MinecraftClient$init);
 	MSHookFunction((void*) &TileTessellator::tessellateInWorld, (void*) &TileTessellator$tessellateInWorld, 	(void**) &_TileTessellator$tessellateInWorld);
-	
 	return JNI_VERSION_1_2;
 }

@@ -34,4 +34,10 @@ public:
 		if(t1==15) return getTextureUVCoordinateSet("cflower", 0);
 		if(t1==16) return getTextureUVCoordinateSet("flower", 16);
 	}
+	
+	void onRemove(TileSource* ts, int x, int y, int z){
+		unsigned char data = ts->getData(x,y,z);
+		ItemInstance* inst = new ItemInstance(id, 1, data);
+		popResource(ts, x, y, z, inst);
+	}
 };

@@ -81,7 +81,12 @@ public:
 		
 		int data = tileSource->getData(x, y, z);
 		if(data==1){
-			forcedUV = tile->getTextureUVCoordinateSet("water",0);
+			forcedUV = tile->getTextureUVCoordinateSet("flowing_water",0);
+			setRenderBounds(0.1875, 0.875, 0.1875, 0.8125, 1.1875, 0.8125);
+			tessellateBlockInWorld(tile, pos);
+		}
+		if(data==2){
+			forcedUV = tile->getTextureUVCoordinateSet("flowing_lava",0);
 			setRenderBounds(0.1875, 0.875, 0.1875, 0.8125, 1.1875, 0.8125);
 			tessellateBlockInWorld(tile, pos);
 		}
