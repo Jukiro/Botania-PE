@@ -4,7 +4,7 @@
 
 class Lexica : public BotaniaItem {
 public:
-	Lexica(int id) : BotaniaItem(id - 0x100) {
+	Lexica(int id) : BotaniaItem(id) {
 		setNameID("lexicaBotania");
 		setIcon("lexicon",0);
 	}

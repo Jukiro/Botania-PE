@@ -81,4 +81,5 @@ public:
 	void setNightMode(bool);
 	void setDayCycleActive(bool);
 	void setDefaultSpawn(const TilePos &);
+	void destroyTile(TileSource &, const TilePos &, bool);
 };

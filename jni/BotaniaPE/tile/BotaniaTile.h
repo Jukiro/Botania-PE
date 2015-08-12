@@ -4,6 +4,7 @@
 #include "mcpe/item/AuxDataTileItem.h"
 #include "mcpe/item/ItemInstance.h"
 #include "mcpe/level/Level.h"
+#include "mcpe/level/TileSource.h"
 
 class BotaniaTile : public Tile {	
 public:

@@ -8,7 +8,7 @@ public:
 		setSoundType(Tile::SOUND_GRASS);
 		setDestroyTime(0.0);
 		setCategory(2);
-		//renderType = 19;
+		renderType = 19;
 		renderPass = 4;
 	}
 	

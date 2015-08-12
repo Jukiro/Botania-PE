@@ -13,4 +13,5 @@ public:
 	DataID getData(int, int, int);
 	bool setTileAndData(int, int, int, FullTile, int);
 	TileTickingQueue* getTickQueue(TilePos const&);
+	void updateNeighborsAt(const TilePos &, TileID);
 };

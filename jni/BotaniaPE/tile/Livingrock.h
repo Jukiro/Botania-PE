@@ -7,6 +7,7 @@ public:
 	Livingrock(int id) : BotaniaTile(id, "livingrock", &Material::stone) {
 		setNameId("livingrock");
 		setSoundType(Tile::SOUND_STONE);
+		destroyTime = 2.0;
 	}
 	
 	int getResource(int i, Random* random){

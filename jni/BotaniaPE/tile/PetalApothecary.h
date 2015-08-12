@@ -8,6 +8,7 @@ public:
 	PetalApothecary(int id) : BotaniaTile(id, &Material::stone) {
 		setNameId("petalApothecary");
 		setSoundType(Tile::SOUND_STONE);
+		destroyTime = 2.0;
 	}
 	
 	int getResource(int i, Random* random){
@@ -36,9 +37,6 @@ public:
 	}
 	
 	bool use(Player* p, int x, int y, int z){
-		/*if(p->getCarriedItem()->getId()==0){
-			return true;
-		}*/
 		return true;
 	}
 };
